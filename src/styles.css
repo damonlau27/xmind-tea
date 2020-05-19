@@ -1,0 +1,23 @@
+.App .bill-add {
+    margin: 20px 0;
+    margin-bottom: 30px;
+}
+
+.App .bill-add .bill-add-part {
+    width: 200px;
+    margin: 0 5px;
+}
+
+.App .bill-show {
+    margin: 30px 0;
+}
+
+.App .bill-show .monnth-select-in-out {
+    padding: 5px 0;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.App .bill-show .monnth-select-in-out .in-out {
+    padding-left: 20px;
+}
