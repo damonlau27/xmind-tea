@@ -19,6 +19,7 @@
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
   },
+  "homepage": "https://hily.site/xmind-tea-page",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",

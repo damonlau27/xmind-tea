@@ -1,44 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# xmind-tea
 
-## Available Scripts
+### 功能
 
-In the project directory, you can run:
+- 加载、解析 [bill.cvs](https://github.com/xmindltd/hiring/blob/master/frontend-1/bill.csv), [categories.csv](https://github.com/xmindltd/hiring/blob/master/frontend-1/categories.csv)
+- 以列表的形式展示账单内容，提供下拉框选择月份进行筛选，其中列表中所展示的账单为选择月份的账单
+- 添加账单
+- 统计并展示所选月份的收入和支出总金额
+- 对账单分类进行二次筛选
+- 对选择月份内的所有账单根据账单分类进行支出金额统计、排序
 
-### `yarn start`
+### 预览
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 加载数据，默认显示12月份账单
+![加载数据，默认显示12月份账单](imgs/anything.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- 添加账单
+![添加账单](imgs/bill-add.png)
 
-### `yarn test`
+- 选择月份
+![选择月份](imgs/month-pick.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 二次筛选账单分类
+![二次筛选账单分类](imgs/category-pick.png)
 
-### `yarn build`
+- 选择的月份分类统计支出、排序
+![选择的月份分类统计支出、排序](imgs/category-amount-sorted.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 使用
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+> env: node version >= v14.0.0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```shell
+$ git clone https://github.com/damonlau27/xmind-tea.git
+$ cd xmind-tea
+$ yarn install  # npm install
+$ yarn test     # npm test
+$ yarn start    # npm start => open explorer with http://localhost:3000/
+```
