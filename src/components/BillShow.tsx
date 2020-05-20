@@ -97,6 +97,7 @@ const BillShow: React.FunctionComponent<TypeProp> = (props): JSX.Element => {
             <Table
                 pagination={false}
                 scroll={{ y: 420 }}
+                loading={props.dataCategory.length ? false : true}
                 columns={billColumns}
                 dataSource={checkBillDataForMonth()}
             />

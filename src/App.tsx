@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { Spin } from 'antd';
 import Papa from 'papaparse';
 import './App.css';
-
-import BillAdd from './components/BillAdd';
-import BillShow from './components/BillShow';
-import OutCategories from './components/OutCategories';
 
 import {
   EnumMonth,
   TypeBill,
   TypeCategory
 } from './types';
+
+const BillAdd = React.lazy(() => import('./components/BillAdd'));
+const BillShow = React.lazy(() => import('./components/BillShow'));
+const OutCategories = React.lazy(() => import('./components/OutCategories'));
 
 
 function App() {
@@ -81,9 +82,11 @@ function App() {
 
   return (
     <div className="App">
-      <BillAdd dataCategory={dataCategory} onClick={handleDataBillChange} />
-      <BillShow dataBill={dataBill} dataCategory={dataCategory} monthIndex={monthIndex} onClick={handleMonthIndexChange} />
-      <OutCategories dataBill={dataBill} dataCategory={dataCategory} monthIndex={monthIndex} />
+      <React.Suspense fallback={<Spin tip='drinking tea ...' size='large'/>}>
+        <BillAdd dataCategory={dataCategory} onClick={handleDataBillChange} />
+        <BillShow dataBill={dataBill} dataCategory={dataCategory} monthIndex={monthIndex} onClick={handleMonthIndexChange} />
+        <OutCategories dataBill={dataBill} dataCategory={dataCategory} monthIndex={monthIndex} />
+      </React.Suspense>
     </div>
   );
 }

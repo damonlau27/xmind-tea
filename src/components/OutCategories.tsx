@@ -62,6 +62,7 @@ const OutCategories: React.FunctionComponent<TypeProp> = (props): JSX.Element =>
             <Table
                 pagination={false}
                 scroll={{ y: 340 }}
+                loading={props.dataCategory.length ? false : true}
                 columns={outCategoryColumns}
                 dataSource={checkOutCategoryData()}
             />
